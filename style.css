@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* NAVBAR */
+/* HEADER / NAVBAR */
 header {
     background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -59,7 +59,7 @@ nav {
 }
 
 nav a {
-    padding: 8px 16px;
+    padding: 10px 18px;
     border-radius: 8px;
     text-decoration: none;
     color: #444;
@@ -244,6 +244,79 @@ footer {
     margin-top: 50px;
 }
 
+/* GALLERY SECTION */
+.gallery-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    position: relative;
+}
+
+.gallery-section h2 {
+    color: #002b5b;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.gallery-section p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* OVERLAY CAPTIONS */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
 /* MOBILE RESPONSIVE */
 @media(max-width: 768px) {
     .navbar {
@@ -271,9 +344,16 @@ footer {
         flex-direction: column;
     }
 
-    .section, .about-page {
+    .section, .about-page, .gallery-section {
         padding: 20px;
         margin: 20px 10px;
+    }
+
+    .gallery-section h2 {
+        font-size: 24px;
+    }
+    .gallery-section p {
+        font-size: 14px;
     }
 
     button, .btn, input[type="submit"] {
@@ -282,7 +362,7 @@ footer {
     }
 }
 
-/* CARDS RESPONSIVE BREAKPOINT */
+/* CARDS RESPONSIVE */
 @media(min-width: 600px) {
     .card, .about-card {
         flex: 1 1 calc(33% - 20px);
