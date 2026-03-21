@@ -37,12 +37,19 @@
     </ul>
 
     <h3>Apply Now</h3>
+<form name="application" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="application" />
 
-    <form>
-        <input type="text" placeholder="Student Name" required>
-        <input type="email" placeholder="Parent Email" required>
-        <button type="submit">Submit Application</button>
-    </form>
+  <input type="text" name="name" placeholder="Full Name" required />
+  <input type="email" name="email" placeholder="Email Address" required />
+  <input type="tel" name="phone" placeholder="Phone Number" required />
+  
+  <textarea name="message" placeholder="Application details"></textarea>
+
+  <button type="submit">Apply Now</button>
+  <input type="hidden" name="form-name" value="application" />
+<input type="hidden" name="redirect" value="/success.html" />
+</form>
 
 </section>
 
