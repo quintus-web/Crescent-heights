@@ -1,70 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Crescent Heights — our motto, vision, mission, and the core values that guide everything we do.">
+  <title>About — Crescent Heights</title>
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="navbar">
-        <a href="index.html" class="logo-section">
-            <img src="images/logo.jpg" class="logo">
-            <span class="school-name">Crescent Heights</span>
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="admission.html">Admissions</a>
-            <a href="contact.html">Contact</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
-    </div>
+  <div class="navbar">
+    <a href="index.html" class="logo-section">
+      <img src="images/logo.jpg" class="logo" alt="Crescent Heights Logo">
+      <span class="school-name">Crescent Heights</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="admission.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </div>
 </header>
 
-<section class="about-page">
+<div class="page-hero">
+  <h1>About Crescent Heights</h1>
+  <p>Who we are, what we believe, and how we serve our community</p>
+</div>
 
-    <div class="about-card">
-        <h2>School Motto</h2>
-        <p class="highlight">Dedicated to Lifelong Excellency</p>
+<div class="motto-banner">
+  <p>✦ Dedicated to Lifelong Excellency ✦</p>
+</div>
+
+<div class="about-page">
+  <div class="about-grid">
+
+    <div class="about-card fade-up">
+      <div class="card-icon">🏫</div>
+      <h2>Our Motto</h2>
+      <p class="highlight">"Dedicated to Lifelong Excellency"</p>
+      <p style="margin-top:12px; color:var(--muted); font-size:0.95rem;">This motto captures our commitment — not just to academic results, but to cultivating a love of learning and pursuit of excellence that lasts a lifetime.</p>
     </div>
 
-    <div class="about-card">
-        <h2>Our Vision</h2>
-        <p>
-            A thriving school community where each learner is valued and prepared 
-            to pursue aspirations of choice and contribute to the world.
-        </p>
+    <div class="about-card fade-up">
+      <div class="card-icon">🔭</div>
+      <h2>Our Vision</h2>
+      <p>A thriving school community where each learner is valued and prepared to pursue aspirations of choice and contribute meaningfully to the world.</p>
     </div>
 
-    <div class="about-card">
-        <h2>Our Mission</h2>
-        <p>
-            To create a sustainable and competitive learning environment that provides 
-            a firm foundation for our children by empowering learners through capacity 
-            building, innovative and practical learning techniques, and strategic partnerships.
-        </p>
+    <div class="about-card full-width fade-up">
+      <div class="card-icon">🎯</div>
+      <h2>Our Mission</h2>
+      <p>To create a sustainable and competitive learning environment that provides a firm foundation for our children — empowering learners through capacity building, innovative and practical learning techniques, and strategic partnerships with families and the broader community.</p>
     </div>
 
-    <div class="about-card">
-        <h2>Core Values</h2>
-        <ul>
-            <li><strong>Excellence:</strong> Striving for high-quality output</li>
-            <li><strong>Responsibility:</strong> Freedom with accountability</li>
-            <li><strong>Ethics:</strong> Strong moral values</li>
-            <li><strong>Personalized Attention:</strong> Individual support</li>
-            <li><strong>Lifelong Learning:</strong> Innovation and adaptability</li>
-        </ul>
+    <div class="about-card full-width fade-up">
+      <h2>Our Core Values</h2>
+      <p style="color:var(--muted); font-size:0.95rem; margin-bottom:18px;">These five principles guide every decision we make — from classroom teaching to school culture.</p>
+      <div class="values-grid">
+        <div class="value-item">
+          <strong>🏆 Excellence</strong>
+          <span>Striving for high-quality output in everything we do</span>
+        </div>
+        <div class="value-item">
+          <strong>🤲 Responsibility</strong>
+          <span>Freedom paired with accountability at every level</span>
+        </div>
+        <div class="value-item">
+          <strong>⚖️ Ethics</strong>
+          <span>Strong moral values as the foundation of character</span>
+        </div>
+        <div class="value-item">
+          <strong>👁️ Personal Attention</strong>
+          <span>Every learner receives individual support and care</span>
+        </div>
+        <div class="value-item">
+          <strong>🌱 Lifelong Learning</strong>
+          <span>Fostering curiosity, innovation, and adaptability</span>
+        </div>
+      </div>
     </div>
 
-</section>
+  </div>
+  <div style="text-align:center; margin-top:16px; padding-bottom:20px;">
+    <a href="admission.html" class="btn btn-blue">Apply for Admission</a>
+  </div>
+</div>
 
 <footer>
-    <p>© 2026 Crescent Heights</p>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-section" style="margin-bottom:12px; display:inline-flex;">
+        <img src="images/logo.jpg" class="logo" alt="Logo">
+        <span class="school-name">Crescent Heights</span>
+      </a>
+      <p>Building brighter futures through quality education, experienced teachers, and a commitment to lifelong excellence.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        📧 crescentheightsschool7@gmail.com<br>
+        📞 +254 753604068<br><br>
+        📍 Nairobi, Kenya
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Crescent Heights. All rights reserved.</span>
+    <span>Dedicated to Lifelong Excellency</span>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 100);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

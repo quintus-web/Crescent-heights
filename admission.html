@@ -1,64 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to Crescent Heights. Fill in our online admissions form and start your child's journey with us.">
+  <title>Admissions — Crescent Heights</title>
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="navbar">
-        <a href="index.html" class="logo-section">
-            <img src="images/logo.jpg" class="logo">
-            <span class="school-name">Crescent Heights</span>
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="admission.html">Admissions</a>
-            <a href="contact.html">Contact</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
-    </div>
+  <div class="navbar">
+    <a href="index.html" class="logo-section">
+      <img src="images/logo.jpg" class="logo" alt="Crescent Heights Logo">
+      <span class="school-name">Crescent Heights</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="admission.html" class="active">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </div>
 </header>
 
-<section class="section">
-    <h2>Admissions</h2>
+<div class="page-hero">
+  <h1>Admissions</h1>
+  <p>Join our school and begin your journey toward lifelong excellence</p>
+</div>
 
-    <p>Join our school and start your journey.</p>
+<div class="form-page">
 
+  <div class="docs-checklist fade-up">
+    <h4>📋 Required Documents</h4>
     <ul>
-        <li>Birth Certificate</li>
-        <li>Previous School Report</li>
-        <li>Passport Photos</li>
+      <li>Birth Certificate (original + copy)</li>
+      <li>Previous School Report Card (last 2 terms)</li>
+      <li>Two Passport-Sized Photographs</li>
+      <li>National ID / Passport of Parent or Guardian</li>
     </ul>
+  </div>
 
-    <h3>Apply Now</h3>
-<form name="application" method="POST" data-netlify="true" action="/success.html">
-  
-  <input type="hidden" name="form-name" value="application" />
+  <div class="form-card fade-up">
+    <h2>Application Form</h2>
+    <p class="sub">Fill in the details below. We'll be in touch within 3 working days.</p>
 
-  <input type="text" name="name" placeholder="Full Name" required />
-  <input type="email" name="email" placeholder="Email Address" required />
-  <input type="tel" name="phone" placeholder="Phone Number" required />
-  
-  <textarea name="message" placeholder="Application details"></textarea>
+    <form name="application" method="POST" data-netlify="true" action="/success.html">
+      <input type="hidden" name="form-name" value="application">
 
-  <button type="submit">Apply Now</button>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="student-name">Student's Full Name *</label>
+          <input type="text" id="student-name" name="student_name" placeholder="e.g. Jane Achieng'" required>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="date_of_birth" required>
+        </div>
+      </div>
 
-</form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="grade">Grade Applying For *</label>
+          <select id="grade" name="grade" required>
+            <option value="" disabled selected>Select grade…</option>
+            <option>Grade 1</option><option>Grade 2</option><option>Grade 3</option>
+            <option>Grade 4</option><option>Grade 5</option><option>Grade 6</option>
+            <option>Grade 7</option><option>Grade 8</option><option>Grade 9</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender *</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select…</option>
+            <option>Male</option><option>Female</option><option>Prefer not to say</option>
+          </select>
+        </div>
+      </div>
 
-</section>
-<form name="application" data-netlify="true" hidden>
-  <input type="text" name="name" />
-</form>
+      <div style="border-top:1px solid var(--border); margin:22px 0 18px; padding-top:18px;">
+        <p style="font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-bottom:16px;">Parent / Guardian Details</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="parent-name">Parent / Guardian Name *</label>
+          <input type="text" id="parent-name" name="parent_name" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label for="relationship">Relationship to Student *</label>
+          <select id="relationship" name="relationship" required>
+            <option value="" disabled selected>Select…</option>
+            <option>Mother</option><option>Father</option><option>Guardian</option><option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="prev-school">Previous School (if any)</label>
+        <input type="text" id="prev-school" name="previous_school" placeholder="Name of previous school">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Additional Information</label>
+        <textarea id="message" name="message" placeholder="Any medical conditions, special needs, or other information we should know about…"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-blue" style="width:100%; font-size:16px; padding:14px;">Submit Application</button>
+    </form>
+  </div>
+
+</div>
 
 <footer>
-    <p>© 2026 Crescent Heights</p>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-section" style="margin-bottom:12px; display:inline-flex;">
+        <img src="images/logo.jpg" class="logo" alt="Logo">
+        <span class="school-name">Crescent Heights</span>
+      </a>
+      <p>Building brighter futures through quality education, experienced teachers, and a commitment to lifelong excellence.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        📧 crescentheightsschool7@gmail.com<br>
+        📞 +254 753604068<br><br>
+        📍 Nairobi, Kenya
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Crescent Heights. All rights reserved.</span>
+    <span>Dedicated to Lifelong Excellency</span>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 100);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

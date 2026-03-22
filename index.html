@@ -1,62 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crescent Heights</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crescent Heights — a modern school committed to quality education, experienced teachers, and lifelong learning. Apply today.">
+  <title>Crescent Heights — Building Brighter Futures</title>
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="navbar">
-        <a href="index.html" class="logo-section">
-            <img src="images/logo.jpg" class="logo">
-            <span class="school-name">Crescent Heights</span>
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="admission.html">Admissions</a>
-            <a href="contact.html">Contact</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
-    </div>
+  <div class="navbar">
+    <a href="index.html" class="logo-section">
+      <img src="images/logo.jpg" class="logo" alt="Crescent Heights Logo">
+      <span class="school-name">Crescent Heights</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="admission.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-    <div>
-        <h1>Welcome to Crescent Heights</h1>
-        <p>Building a brighter future through education</p>
-        <a href="admission.html" class="btn">Apply Now</a>
+  <div class="hero-content">
+    <div class="hero-badge">🎓 Nairobi's School of Excellence</div>
+    <h1>Building Brighter Futures Through Education</h1>
+    <p>Dedicated to Lifelong Excellency — where every learner is valued, empowered, and prepared to thrive.</p>
+    <div class="hero-btns">
+      <a href="admission.html" class="btn btn-primary">Apply Now</a>
+      <a href="about.html" class="btn btn-outline">Learn More</a>
     </div>
+  </div>
 </section>
+
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat fade-up"><div class="stat-number">100+</div><div class="stat-label">Students Enrolled</div></div>
+    <div class="stat fade-up"><div class="stat-number">10+</div><div class="stat-label">Experienced Teachers</div></div>
+    <div class="stat fade-up"><div class="stat-number">5+</div><div class="stat-label">Years of Excellence</div></div>
+    <div class="stat fade-up"><div class="stat-number">98%</div><div class="stat-label">Transition Rate</div></div>
+  </div>
+</div>
 
 <section class="section">
-    <h2>Why Choose Us</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Quality Education</h3>
-            <p>We provide strong academic foundations.</p>
-        </div>
-        <div class="card">
-            <h3>Experienced Teachers</h3>
-            <p>Dedicated and skilled educators.</p>
-        </div>
-        <div class="card">
-            <h3>Modern Learning</h3>
-            <p>Innovative and practical teaching methods.</p>
-        </div>
+  <div class="section-header fade-up">
+    <div class="section-tag">Why Choose Us</div>
+    <h2>A School That Puts Learners First</h2>
+    <p class="section-sub">We combine academic rigour with a nurturing environment to help every child reach their full potential.</p>
+  </div>
+  <div class="cards">
+    <div class="card fade-up">
+      <div class="card-icon">📚</div>
+      <h3>Quality Education</h3>
+      <p>Our curriculum follows the national syllabus while incorporating modern, evidence-based teaching practices that build strong academic foundations from the earliest years.</p>
     </div>
+    <div class="card fade-up">
+      <div class="card-icon">👩‍🏫</div>
+      <h3>Experienced Teachers</h3>
+      <p>Every member of our teaching staff is qualified, passionate, and committed to continuous professional development — ensuring your child learns from the best.</p>
+    </div>
+    <div class="card fade-up">
+      <div class="card-icon">💡</div>
+      <h3>Modern Learning</h3>
+      <p>We use innovative, practical teaching methods and digital tools that prepare learners not just for exams, but for a rapidly changing world.</p>
+    </div>
+    <div class="card fade-up">
+      <div class="card-icon">🤝</div>
+      <h3>Personalized Attention</h3>
+      <p>Small class sizes and a student-centered approach mean no child is left behind. We track individual progress and adjust support accordingly.</p>
+    </div>
+    <div class="card fade-up">
+      <div class="card-icon">⚽</div>
+      <h3>Holistic Development</h3>
+      <p>Beyond academics, we offer sports, arts, and clubs that develop character, teamwork, and a love of lifelong learning in every student.</p>
+    </div>
+    <div class="card fade-up">
+      <div class="card-icon">🛡️</div>
+      <h3>Safe Environment</h3>
+      <p>We maintain a secure, inclusive, and welcoming school community where every child feels respected, supported, and free to grow.</p>
+    </div>
+  </div>
 </section>
-<form name="application" method="POST" data-netlify="true" hidden>
-  <input type="hidden" name="form-name" value="application" />
-  <input type="text" name="name" />
-</form>
+
+<section style="background: linear-gradient(135deg, #002b5b, #0057D9); padding: 64px 24px; text-align: center;">
+  <div style="max-width: 560px; margin: 0 auto;">
+    <h2 style="color:#fff; font-size:clamp(1.5rem,3vw,2rem); font-weight:700; margin-bottom:12px; letter-spacing:-0.5px;">Ready to Join the Crescent Heights Family?</h2>
+    <p style="color:rgba(255,255,255,0.75); margin-bottom:28px; font-size:1.05rem;">Applications are open. Start your journey with us today.</p>
+    <a href="admission.html" class="btn btn-primary">Apply for Admission</a>
+  </div>
+</section>
+
 <footer>
-    <p>© 2026 Crescent Heights</p>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-section" style="margin-bottom:12px; display:inline-flex;">
+        <img src="images/logo.jpg" class="logo" alt="Logo">
+        <span class="school-name">Crescent Heights</span>
+      </a>
+      <p>Building brighter futures through quality education, experienced teachers, and a commitment to lifelong excellence — right here in Nairobi.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        📧 crescentheightsschool7@gmail.com<br>
+        📞 +254 753604068<br><br>
+        📍 Nairobi, Kenya
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Crescent Heights. All rights reserved.</span>
+    <span>Dedicated to Lifelong Excellency</span>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

@@ -1,47 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Crescent Heights. Send us a message, call, or find us on the map.">
+  <title>Contact — Crescent Heights</title>
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="navbar">
-        <a href="index.html" class="logo-section">
-            <img src="images/logo.jpg" class="logo">
-            <span class="school-name">Crescent Heights</span>
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="admission.html">Admissions</a>
-            <a href="contact.html">Contact</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
-    </div>
+  <div class="navbar">
+    <a href="index.html" class="logo-section">
+      <img src="images/logo.jpg" class="logo" alt="Crescent Heights Logo">
+      <span class="school-name">Crescent Heights</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="admission.html">Admissions</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </div>
 </header>
 
-<section class="section">
-    <h2>Contact Us</h2>
+<div class="page-hero">
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you — reach out any time</p>
+</div>
 
-    <p>Email: info@crescent.com</p>
-    <p>Phone: +254 700 000000</p>
+<div class="contact-layout">
 
-    <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
+  <div>
+    <div class="contact-info fade-up">
+      <h2>Get in Touch</h2>
+      <p class="sub">Have a question about admissions, fees, or school life? Send us a message and we'll respond within one business day.</p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📧</div>
+        <div class="contact-detail-text">
+          <strong>Email</strong><span>info@crescent.com</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div class="contact-detail-text">
+          <strong>Phone</strong><span>+254 700 000 000</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🕐</div>
+        <div class="contact-detail-text">
+          <strong>Office Hours</strong><span>Mon – Fri, 7:30 AM – 5:00 PM</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div class="contact-detail-text">
+          <strong>Address</strong><span>Nairobi, Kenya</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Replace the src with your school's actual Google Maps embed link -->
+    <div class="map-embed fade-up">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853822396!2d36.68226424646!3d-1.3028617926862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1700000000000"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Crescent Heights on Google Maps">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="form-card fade-up">
+    <h2>Send Us a Message</h2>
+    <p class="sub">Fill in the form below and we'll get back to you shortly.</p>
+
+    <form name="contact" method="POST" data-netlify="true" action="/success.html">
+      <input type="hidden" name="form-name" value="contact">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject *</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>What is this about?</option>
+          <option>Admissions Enquiry</option>
+          <option>Fee Structure</option>
+          <option>School Calendar / Events</option>
+          <option>General Question</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="Write your message here…" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-blue" style="width:100%; font-size:16px; padding:14px;">Send Message</button>
     </form>
-</section>
+  </div>
+
+</div>
 
 <footer>
-    <p>© 2026 Crescent Heights</p>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-section" style="margin-bottom:12px; display:inline-flex;">
+        <img src="images/logo.jpg" class="logo" alt="Logo">
+        <span class="school-name">Crescent Heights</span>
+      </a>
+      <p>Building brighter futures through quality education, experienced teachers, and a commitment to lifelong excellence.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        📧 crescentheightsschool7@gmail.com<br>
+        📞 +254 753604068<br><br>
+        📍 Nairobi, Kenya
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Crescent Heights. All rights reserved.</span>
+    <span>Dedicated to Lifelong Excellency</span>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 100);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
