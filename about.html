@@ -94,14 +94,12 @@
   </div>
 </div>
 
+<div class="map-section">
+  <div class="map-label">📍 Find Us — Rongai / Ngong, Nairobi</div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.28997304698953!2d36.71396829455627!3d-1.393170629211568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0526e683555d%3A0xda788931d4030769!2sThe%20Crescent%20Heights%20School!5e0!3m2!1sen!2ske!4v1775996289267!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Crescent Heights School on Google Maps"></iframe>
+</div>
+
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="logo-section" style="margin-bottom:12px; display:inline-flex;">
-        <img src="images/logo.jpg" class="logo" alt="Crescent Heights School Logo">
-        <span class="school-name">Crescent Heights</span>
-      </a>
-      <p>Building brighter futures through quality education, experienced teachers, and a commitment to lifelong excellence.</p>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
@@ -128,6 +126,8 @@
   </div>
 </footer>
 
+<a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
 <script>
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('main-nav');
@@ -144,6 +144,9 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 300));
+  btn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 </script>
 </body>
 </html>

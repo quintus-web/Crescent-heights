@@ -45,13 +45,13 @@
       <div class="contact-detail">
         <div class="contact-detail-icon">📧</div>
         <div class="contact-detail-text">
-          <strong>Email</strong><span>info@crescent.com</span>
+          <strong>Email</strong><span>crescentheightsschool7@gmail.com</span>
         </div>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">📞</div>
         <div class="contact-detail-text">
-          <strong>Phone</strong><span>+254 700 000 000</span>
+          <strong>Phone</strong><span>+254 753 604 068</span>
         </div>
       </div>
       <div class="contact-detail">
@@ -71,10 +71,10 @@
     <!-- Replace the src with your school's actual Google Maps embed link -->
     <div class="map-embed fade-up">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853822396!2d36.68226424646!3d-1.3028617926862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1700000000000"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.28997304698953!2d36.71396829455627!3d-1.393170629211568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0526e683555d%3A0xda788931d4030769!2sThe%20Crescent%20Heights%20School!5e0!3m2!1sen!2ske!4v1775996289267!5m2!1sen!2ske"
         allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        title="Crescent Heights on Google Maps">
+        title="Crescent Heights School on Google Maps">
       </iframe>
     </div>
   </div>
@@ -125,6 +125,11 @@
 
 </div>
 
+<div class="map-section">
+  <div class="map-label">📍 Find Us — Rongai / Ngong, Nairobi</div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.28997304698953!2d36.71396829455627!3d-1.393170629211568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0526e683555d%3A0xda788931d4030769!2sThe%20Crescent%20Heights%20School!5e0!3m2!1sen!2ske!4v1775996289267!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Crescent Heights School on Google Maps"></iframe>
+</div>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -159,6 +164,8 @@
   </div>
 </footer>
 
+<a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
 <script>
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('main-nav');
@@ -175,6 +182,9 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 300));
+  btn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 </script>
 </body>
 </html>
