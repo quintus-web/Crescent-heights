@@ -530,6 +530,30 @@ footer { background: #0d1b3e; color: rgba(255,255,255,0.75); padding: 56px 24px 
   border: none;
 }
 
+/* ── TRANSPORT SECTION ── */
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.transport-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow);
+  font-size: 22px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.transport-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.transport-card strong { font-size: 15px; color: var(--blue-dark); display: block; margin-top: 6px; }
+.transport-card span { font-size: 13px; color: var(--muted); }
+
 /* ── PERKS STRIP ── */
 .perks-strip {
   display: flex;
@@ -637,6 +661,36 @@ footer { background: #0d1b3e; color: rgba(255,255,255,0.75); padding: 56px 24px 
   padding: 14px 18px;
   font-size: 14px;
   color: var(--text);
+}
+
+/* ── WHATSAPP BUTTON ── */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  z-index: 999;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37,211,102,0.5);
+}
+
+@media (max-width: 480px) {
+  .whatsapp-btn span { display: none; }
+  .whatsapp-btn { padding: 12px; border-radius: 50%; bottom: 80px; }
 }
 
 /* ── BACK TO TOP ── */
